@@ -1,0 +1,71 @@
+/*----------------------------------------------------------
+
+author: Ashung Hung
+modified by Bigxixi
+Homepage: https://github.com/Ashung/Automate-Sketch
+license: CC-BY 4.0
+
+----------------------------------------------------------*/
+
+var languageSetting = function(context) {
+    var doc = context.document;
+
+    var manifestFilePath = context.plugin.url().path() + "/Contents/Sketch/manifest.json";
+    var localizationFilePath = context.plugin.url().path() + "/Contents/Resources/Localization.js";
+
+    var supportLanguages = {
+        "en": "English",
+        "zh_Hans": "简体中文"
+    };
+    var supportLanguagesKeys = Object.keys(supportLanguages);
+    var supportLanguagesValues = [];
+    for (var key in supportLanguages) {
+        supportLanguagesValues.push(supportLanguages[""+key+""]);
+    }
+
+    // Dialog
+    var accessory = NSComboBox.alloc().initWithFrame(NSMakeRect(0, 0, 240, 28));
+    accessory.addItemsWithObjectValues(supportLanguagesValues);
+    accessory.selectItemAtIndex(1);
+    var alert = NSAlert.alloc().init();
+    alert.setMessageText("语言 Language");
+    alert.addButtonWithTitle("OK");
+    alert.addButtonWithTitle("Cancel");
+    alert.setAccessoryView(accessory);
+
+    // Click OK button
+    var responseCode = alert.runModal();
+    var languageIndex = accessory.indexOfSelectedItem();
+    var MenuLanguageFileURL = context.plugin.urlForResourceNamed("manifest_" + supportLanguagesKeys[languageIndex] + ".json");
+    var languageFileURL = context.plugin.urlForResourceNamed("Localization_" + supportLanguagesKeys[languageIndex] + ".js");
+    if (responseCode == 1000) {
+        if (MenuLanguageFileURL && languageFileURL) {
+            var MenuLanguageFilePath = MenuLanguageFileURL.path();
+            var languageFilePath = languageFileURL.path();
+            // Remove manifest.json
+            NSFileManager.defaultManager().removeItemAtPath_error_(
+                manifestFilePath, nil
+            );
+            NSFileManager.defaultManager().removeItemAtPath_error_(
+            localizationFilePath, nil
+            );
+            // Replace manifest.json
+            NSFileManager.defaultManager().copyItemAtPath_toPath_error_(
+                MenuLanguageFilePath, manifestFilePath, nil
+            );
+            NSFileManager.defaultManager().copyItemAtPath_toPath_error_(
+            languageFilePath, localizationFilePath, nil
+            );
+            // Reload Plugin
+            AppController.sharedInstance().pluginManager().reloadPlugins();
+        } else {
+            var app = NSApplication.sharedApplication();
+            app.displayDialog_withTitle_(
+                "Language file not found, please re-install the plugin.\n语言文件缺失，请重新下载安装插件。",
+                "❌ Error - 错误"
+            );
+            NSWorkspace.sharedWorkspace().openURL(NSURL.URLWithString("https://github.com/bigxixi/Sketch2AE"));
+        }
+    }
+
+}

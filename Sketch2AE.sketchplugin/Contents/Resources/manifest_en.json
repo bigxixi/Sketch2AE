@@ -1,0 +1,74 @@
+{
+  "author" : "BigXiXI",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "name" : "Generate ExportSlices",
+      "handler" :  "sliceGroups",
+      "shortcut": "control alt s",
+      "identifier" : "Sketch2AE.slice"
+    },{
+      "script" : "script.cocoascript",
+      "name" : "Export Artboards",
+      "handler" :  "exportArtboards",
+      "shortcut": "control alt e",
+      "identifier" : "Sketch2AE.export"
+    },{
+      "script" : "script.cocoascript",
+      "name" : "Clear ExportSlices",
+      "shortcut": "control alt c",
+      "handler" : "clearSlices",
+      "identifier" : "Sketch2AE.clear"
+    },{
+      "script" : "script.cocoascript",
+      "name" : "How to...",
+      "shortcut": "control alt h",
+      "handler" : "help",
+      "identifier" : "Sketch2AE.help"
+    },{
+      "script" : "script.cocoascript",
+      "name" : "❤️ Buy me a coffee~",
+      "handler" : "donate",
+      "identifier" : "Sketch2AE.donate"
+    },{
+      "script" : "Change_Languages.cocoascript",
+      "name" : "语言 Language",
+      "handler" : "languageSetting",
+      "identifier" : "Sketch2AE.language"
+    },{
+      "script" : "script.cocoascript",
+      "name" : "Check For Update",
+      "handler" : "checkUpdate",
+      "identifier" : "Sketch2AE.update"
+    },{
+      "script" : "script.cocoascript",
+      "name" : "Report Issues",
+      "handler" : "issues",
+      "identifier" : "Sketch2AE.issues"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "Sketch2AE.slice",
+      "Sketch2AE.export",
+      "Sketch2AE.clear",
+      "Sketch2AE.language",
+      {
+        "title": "HELP",
+        "items": [
+            "Sketch2AE.help",
+            "Sketch2AE.issues",
+            "Sketch2AE.update"
+                ]
+      },
+      "-",
+      "Sketch2AE.donate"
+    ],
+    "title" : "🔮 Sketch2AE"
+  },
+  "identifier" : "com.sketch.bigxixi.Sketch2AE",
+  "version" : "1.0",
+  "description" : "Export Sketch Artboards to After Effect Comps.",
+  "authorEmail" : "xixi@bigxixi.com",
+  "name" : "Sketch2AE"
+}
