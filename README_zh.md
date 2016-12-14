@@ -72,7 +72,7 @@
 
 ## 快捷键列表:
 ```
-**Becareful of shortcut conflicting with other plugins
+**要注意和其他插件的快捷键冲突
 ```
  * `Control` + `Alt` + `S` : 生成‘导出切片’
  * `Control` + `Alt` + `E` : 导出画板
