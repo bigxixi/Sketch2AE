@@ -1,13 +1,51 @@
+<img src="https://raw.githubusercontent.com/bigxixi/ReadMe-Resources/master/Sketch2AE/sk2aegif.gif">  
 
-# Sketch2AE
+# Sketch2AE v2.0 - 支持矢量图层导出!   
+将sketch中的矢量图层导入为AE形状图层，然后就可以接入bodymovin或者Lottie了！  
 
-轻松导出skech文件中的切片到Adobe After Effect并自动定位。  
-利用帧另存为Photoshop图层功能，还可以实现Sketch导出到Photoshop哦。  
+## 使用方法:  
+0. （可选）切换语言为中文版，点击`Plugins` -> `Sketch2AE` -> `语言 language`.  
+1. 把需要导出的形状放到一个画板里, 然后执行 `Plugins` -> `Sketch2AE` -> `导出矢量形状`.  
+2. 在弹出的面板设置合成`时长`和`帧率`并选择要导出的画板，点击`OK` K然后选择导出地址。执行后会在该地址创建一个 `.jsx` 脚本文件.  
+3. 打开After Effect，执行 `文件` -> `脚本` -> `运行脚本文件`, 选择刚才导出的 `.jsx` 文件, 这样会以画板为尺寸新建一个合成，你将看到图像被一点点的画出来.  
+
+<img src="https://raw.githubusercontent.com/bigxixi/ReadMe-Resources/master/Sketch2AE/ch2.png">  
+
+<img src="https://raw.githubusercontent.com/bigxixi/ReadMe-Resources/master/Sketch2AE/ch.png">  
+
+<img src="https://raw.githubusercontent.com/bigxixi/ReadMe-Resources/master/Sketch2AE/shapedemo.gif">  
+
+有没有很带感:-D
+(插画来自https://dribbble.com/shots/3038928-Free-Download-Color-Vector-Characters)
+
+## 局限性
+这个插件现在功能还有限，以下这些特性还不支持 
+- 不支持渐变描边/渐变填充。 从SK读取没问题，AE用脚本无法自动建立渐变，只能手动。也发现了一些奇技淫巧但是不确定能不能跑通。  
+- 不支持蒙版（Uderlying Masks）。主要是没时间弄，以后会解决。  
+- 文字暂不支持。 主要是没时间弄，以后会加入。 
+- 不支持图层的翻转。
+- 不支持图层样式，以后应该会解决。   
+- 还有一些SK有而AE没有的特性比如描边居中/靠外/靠内，还有箭头这些。  
+
+其他的一些细节比如叠加模式、布尔运算、虚线是支持的，好好利用也是能出效果的。  
+这个插件适合导出那种扁平纯色、线条风格的图，也是bodymovin和Lottie支持较好的风格。  
 
 ## How to install:
 
 1.下载压缩包 [`点我`](https://github.com/bigxixi/Sketch2AE/archive/master.zip) 并解压.  
 2.双击 `Sketch2AE.sketchplugin.`安装。  
+
+--------------
+
+````
+## 旧版SK2AE v1.0 介绍
+```` 
+
+
+# Sketch2AE
+
+轻松导出skech文件中的切片到Adobe After Effect并自动定位。  
+利用帧另存为Photoshop图层功能，还可以实现Sketch导出到Photoshop哦。  
 
 ## 如何使用:  
 0. （可选）切换语言为中文版，点击`Plugins` -> `Sketch2AE` -> `语言 language`.  
