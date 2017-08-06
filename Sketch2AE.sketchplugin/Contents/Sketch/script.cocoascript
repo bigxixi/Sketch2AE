@@ -277,6 +277,11 @@ var  issues = function() {
     NSWorkspace.sharedWorkspace().openURL(NSURL.URLWithString(url));
 }
 
+var  urlHelp = function() {
+    var url = "https://github.com/bigxixi/Sketch2AE/";
+    NSWorkspace.sharedWorkspace().openURL(NSURL.URLWithString(url));
+}
+
 function getRemoteJson(url) {
     var request = NSURLRequest.requestWithURL(NSURL.URLWithString(url));
     var response = NSURLConnection.sendSynchronousRequest_returningResponse_error(request, null, null);

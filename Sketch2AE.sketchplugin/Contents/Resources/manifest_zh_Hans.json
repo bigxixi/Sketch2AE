@@ -1,7 +1,13 @@
 {
   "author" : "BigXiXI",
   "commands" : [
-    {
+  {
+      "script" : "shapeExporer.js",
+      "name" : "导出矢量形状",
+      "handler" : "shapeExport",
+      "shortcut": "control alt a",
+      "identifier" : "Sketch2AE.shapeExport"
+    },{
       "script" : "script.cocoascript",
       "name" : "生成‘导出切片’",
       "handler" :  "sliceGroups",
@@ -49,6 +55,7 @@
   ],
   "menu" : {
     "items" : [
+      "Sketch2AE.shapeExport",
       "Sketch2AE.slice",
       "Sketch2AE.export",
       "Sketch2AE.clear",
@@ -67,7 +74,7 @@
     "title" : "🔮 Sketch2AE - Sketch导出到AE"
   },
   "identifier" : "com.sketch.bigxixi.Sketch2AE",
-  "version" : "1.0",
+  "version" : "2.0",
   "description" : "将Sketch画板导出为After Effect合成。",
   "authorEmail" : "xixi@bigxixi.com",
   "name" : "🔮 Sketch2AE"
