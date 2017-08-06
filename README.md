@@ -1,13 +1,46 @@
-# Sketch2AE
+<img src="https://raw.githubusercontent.com/bigxixi/ReadMe-Resources/master/Sketch2AE/sk2aegif.gif">  
 
-A Sketch plugin to export sketch slice to Adobe After Effect and potisition them automatically.  
-Whats more, you can use the `Save Frame As Photoshop Layers` inside AE to export contents to Photoshop!  
-[中文版介绍点这里](https://github.com/bigxixi/SKetch2AE/blob/master/README_zh.md)  
+# Sketch2AE v2.0 - Shape Export support!  
+Now you can export shapes! To AE Shape layer!  Then to Bodymovin or Lottie!    
+将sketch中的矢量图层导入为AE形状图层，然后就可以接入bodymovin或者Lottie了！  
+[中文版介绍点这里](https://github.com/bigxixi/SKetch2AE/blob/master/README_zh.md)  
 
-## How to install:
+## How to use:  
+In Sketch， put the shape you want to eport in an artboard, go to Plungin -> Sketch2AE -> Export Shapes  
+
+<img src="https://raw.githubusercontent.com/bigxixi/ReadMe-Resources/master/Sketch2AE/en2.png">  
+
+in the pop-up panel, choose the artboard, set the length and fps, then hit OK.  
+
+<img src="https://raw.githubusercontent.com/bigxixi/ReadMe-Resources/master/Sketch2AE/en.png">  
+
+Open AE and run File -> Scripts -> Run Script File, select the ".jsx" file you exported.  
+Then you will see the magic :)
+
+## Limitations
+Unfortunately, this plugin has some limitations:  
+- Gradient Fill and Stroke are not supported. AE dosent allow script to generate gradients automaticly.  
+- Uderlying Masks. I will do it in the future.  
+- Texts not supported. I will do it in the future.  
+- Flip layer not supported.
+- Layer styles not supported.  
+- Features that Sketch has but AE not. Stroke position, Arrow, etc.  
+
+
+## How to install:  
 
 1.Download the [`Plugin File(hit me)`](https://github.com/bigxixi/Sketch2AE/archive/master.zip) and unzip.  
-2.Double click `Sketch2AE.sketchplugin.` 
+2.Double click `Sketch2AE.sketchplugin.`   
+
+
+--------------
+
+````
+## SK2AE v1.0 introduction.
+```` 
+A Sketch plugin to export sketch slice to Adobe After Effect and potisition them automatically.  
+Whats more, you can use the `Save Frame As Photoshop Layers` inside AE to export contents to Photoshop!  
+
 
 ## How to use:  
 1. Save your work on Sketch.  
