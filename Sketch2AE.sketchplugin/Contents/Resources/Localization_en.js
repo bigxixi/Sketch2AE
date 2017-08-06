@@ -42,7 +42,6 @@ var local_updateText4 = "You are using old version (v";
 var local_updateText5 = "Click OK to download the latest version.";
 var local_updateText6 = "Failed to check for new version,contact xixi@bigxixi.com for help!\n";
 var local_updateText7 = "Can not check for updates.";
-<<<<<<< HEAD
 //20170807new
 var local_exportDsp2 = 'Put your shapes in an artboard then export.';
 var local_shapeExported = 'Shape exported! Open AE and run File -> Scripts -> Run Script File. to run the file you\'ve exported.';
@@ -51,4 +50,3 @@ var local_endMSG2 = 'Some effects in you shape havent cannot be transimit to AE.
 var local_endMSG3 = 'Shape imported.';
 var local_shapeHelp = 'not finish yet...';
 =======
->>>>>>> origin/master
