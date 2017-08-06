@@ -49,4 +49,3 @@ var local_endMSG1 = 'Done !';
 var local_endMSG2 = 'Some effects in you shape havent cannot be transimit to AE.Check your shape in AE and adjust them by hand.\n';
 var local_endMSG3 = 'Shape imported.';
 var local_shapeHelp = 'not finish yet...';
-=======
