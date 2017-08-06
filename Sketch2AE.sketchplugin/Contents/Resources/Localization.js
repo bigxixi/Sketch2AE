@@ -2,7 +2,7 @@ var local_saveDoc = 'Please save your sketch file first!';
 var local_warning = 'Warning!';
 var local_tooMuchArtboards = 'You have to many artboards in this file, which might lead to UI crash.';
 var local_pickArtboardDsp = 'Pick Artboards(current page:';
-var local_exportDsp = 'Piked Artboards will get a snapshot for reference.';
+var local_exportDsp = 'Picked Artboards will get a snapshot for reference.';
 var local_inputLength = 'The length of the composition(in seconds):';
 var local_inputFPS = 'The FPS of the composition:';
 var local_noArtboards = 'There are no Artboards in this page:(';
@@ -42,6 +42,7 @@ var local_updateText4 = "You are using old version (v";
 var local_updateText5 = "Click OK to download the latest version.";
 var local_updateText6 = "Failed to check for new version,contact xixi@bigxixi.com for help!\n";
 var local_updateText7 = "Can not check for updates.";
+<<<<<<< HEAD
 //20170807new
 var local_exportDsp = 'Put your shapes in an artboard then export them to AE.';
 var local_shapeExported = 'Shape exported! Open AE and run File -> Scripts -> Run Script File. to run the file you\'ve exported.';
@@ -49,3 +50,5 @@ var local_endMSG1 = 'Done !';
 var local_endMSG2 = 'Some effects in you shape havent cannot be transimit to AE.Check your shape in AE and adjust them by hand.\n';
 var local_endMSG3 = 'Shape imported.';
 var local_shapeHelp = 'not finish yet...';
+=======
+>>>>>>> origin/master
