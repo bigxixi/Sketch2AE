@@ -17,6 +17,10 @@ in the pop-up panel, choose the artboard, set the length and fps, then hit OK.
 Open AE and run File -> Scripts -> Run Script File, select the ".jsx" file you exported.  
 Then you will see the magic :)
 
+<img src="https://raw.githubusercontent.com/bigxixi/ReadMe-Resources/master/Sketch2AE/shapedemo.gif">  
+
+(image from https://dribbble.com/shots/3038928-Free-Download-Color-Vector-Characters)
+
 ## Limitations
 Unfortunately, this plugin has some limitations:  
 - Gradient Fill and Stroke are not supported. AE dosent allow script to generate gradients automaticly.  
