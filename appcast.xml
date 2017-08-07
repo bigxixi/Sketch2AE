@@ -6,7 +6,7 @@
     <description>A Sketch plugin to export sketch file to Adobe After Effect</description>
     <language>en</language>
       <item>
-        <title>Version 2.0</title>
+        <title>Version 2.01</title>
         <description>
           <![CDATA[
             <ul>
@@ -14,7 +14,7 @@
             </ul>
           ]]>
         </description>
-        <enclosure url="https://github.com/bigxixi/Sketch2AE/archive/master.zip" sparkle:version="2.0" />
+        <enclosure url="https://github.com/bigxixi/Sketch2AE/archive/master.zip" sparkle:version="2.01" />
       </item>
   </channel>
 </rss>
