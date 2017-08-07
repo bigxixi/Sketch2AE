@@ -75,6 +75,7 @@
   },
   "identifier" : "com.sketch.bigxixi.Sketch2AE",
   "version" : "2.0",
+  "appcast": "https://raw.githubusercontent.com/bigxixi/Sketch2AE/master/appcast.xml",
   "description" : "Export Sketch Artboards to After Effect Comps.",
   "authorEmail" : "xixi@bigxixi.com",
   "name" : "Sketch2AE"
