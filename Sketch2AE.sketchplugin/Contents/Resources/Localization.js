@@ -46,7 +46,7 @@ var local_updateText7 = "Can not check for updates.";
 var local_exportDsp2 = 'Put your shapes in an artboard then export them to AE.';
 var local_shapeExported = 'Shape exported! Open AE and run File -> Scripts -> Run Script File. to run the file you\'ve exported.';
 var local_endMSG1 = 'Done !';
-var local_endMSG2 = 'Some effects in you shape havent cannot be transimit to AE.Check your shape in AE and adjust them by hand.\n';
+var local_endMSG2 = 'Some effects in you shape havent cannot be transimit to AE.Check your shape in AE and adjust them by hand.';
 var local_endMSG3 = 'Shape imported.';
 var local_shapeHelp = 'not finish yet...';
 
