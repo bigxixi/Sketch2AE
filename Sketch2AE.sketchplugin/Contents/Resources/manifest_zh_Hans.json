@@ -74,7 +74,7 @@
     "title" : "🔮 Sketch2AE - Sketch导出到AE"
   },
   "identifier" : "com.sketch.bigxixi.Sketch2AE",
-  "version" : "2.0",
+  "version" : "2.01",
   "appcast": "https://raw.githubusercontent.com/bigxixi/Sketch2AE/master/appcast.xml",
   "description" : "将Sketch画板导出为After Effect合成。",
   "authorEmail" : "xixi@bigxixi.com",
