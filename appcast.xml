@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Sketch2AE</title>
-    <link> https://raw.githubusercontent.com/bigxixi/Sketch2AE/master/appcast.xml</link>
+    <link>https://raw.githubusercontent.com/bigxixi/Sketch2AE/master/appcast.xml</link>
     <description>A Sketch plugin to export sketch file to Adobe After Effect</description>
     <language>en</language>
       <item>
