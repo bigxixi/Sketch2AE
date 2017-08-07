@@ -43,6 +43,6 @@ var local_updateText7 = "更新查询失败";
 var local_exportDsp2 = '把想要导出的矢量图层放到单独的画板中。';
 var local_shapeExported = '导出成功! 打开 AE 点击 文件 -> 脚本 -> 运行脚本文件. 选择刚才导出的.jsx文件，这样就导入AE了。';
 var local_endMSG1 = '完成！';
-var local_endMSG2 = '有些效果无法从sketch转到AE，请检查导入的资源并手动调整！\n';
+var local_endMSG2 = '有些效果无法从sketch转到AE，请检查导入的资源并手动调整！';
 var local_endMSG3 = '矢量图已被导入为AE形状图层。';
 var local_shapeHelp = '帮助还没空写。。。';
