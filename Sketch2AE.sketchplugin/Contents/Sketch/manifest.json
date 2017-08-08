@@ -3,7 +3,7 @@
   "commands" : [
     {
       "script" : "shapeExporer.js",
-      "name" : "Export Shapes",
+      "name" : "🆕 Export Shapes",
       "handler" : "shapeExport",
       "shortcut": "control alt a",
       "identifier" : "Sketch2AE.shapeExport"
@@ -74,9 +74,9 @@
     "title" : "🔮 Sketch2AE"
   },
   "identifier" : "com.sketch.bigxixi.Sketch2AE",
-  "version" : "2.01",
+  "version" : "2.02",
   "appcast": "https://raw.githubusercontent.com/bigxixi/Sketch2AE/master/appcast.xml",
   "description" : "Export Sketch Artboards to After Effect Comps.",
   "authorEmail" : "xixi@bigxixi.com",
-  "name" : "Sketch2AE"
+  "name" : "🔮 Sketch2AE"
 }

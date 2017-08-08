@@ -390,6 +390,9 @@ var shapeExport = function(context) {
                     checkbox.setButtonType(NSSwitchButton);
                     checkbox.setTitle(artboards[i].name());
                         checkbox.setState(false);
+            for(var j=0;j<subLayer.length;j++){
+                    checkbox.setState(subLayer[j].isSelected());   
+                }
                 UI.addAccessoryView( checkbox );
             }
         }else{
