@@ -306,7 +306,7 @@ var  checkUpdate = function(context) {
             alert.addButtonWithTitle("Cancel");
             var responseCode = alert.runModal();
             if(responseCode == 1000) {
-                var newVersionURL = "https://github.com/bigxixi/Sktch2AE/archive/master.zip";
+                var newVersionURL = "https://github.com/bigxixi/Sketch2AE/archive/master.zip";
                 NSWorkspace.sharedWorkspace().openURL(NSURL.URLWithString(newVersionURL));
             }
         }
