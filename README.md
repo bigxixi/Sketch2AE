@@ -1,3 +1,6 @@
+Google release another 'Sketch2AE' plugin, if you are looking for that one, visit . 
+https://google.github.io/sketch2ae/
+---------------
 <img src="https://raw.githubusercontent.com/bigxixi/ReadMe-Resources/master/Sketch2AE/sk2aegif.gif">  
 
 # Sketch2AE v2.0 - Shape Export support!  
