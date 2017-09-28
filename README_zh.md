@@ -1,4 +1,6 @@
-<img src="https://raw.githubusercontent.com/bigxixi/ReadMe-Resources/master/Sketch2AE/sk2aegif.gif">  
+Google 也搞了个叫Sketch2AE的插件，和我这个版本的区别见：https://zhuanlan.zhihu.com/p/28828769  <br>
+----------------------
+<img src="https://raw.githubusercontent.com/bigxixi/ReadMe-Resources/master/Sketch2AE/sk2aegif.gif">  
 
 # Sketch2AE v2.0 - 支持矢量图层导出!   
 将sketch中的矢量图层导入为AE形状图层，然后就可以接入bodymovin或者Lottie了！  
