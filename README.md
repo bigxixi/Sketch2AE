@@ -1,3 +1,5 @@
+2.03 update - support Sketch v49  
+--------
 Google release another 'Sketch2AE' plugin, if you are looking for that one, visit . 
 https://google.github.io/sketch2ae/
 ---------------
