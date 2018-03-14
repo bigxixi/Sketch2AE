@@ -6,15 +6,15 @@
     <description>A Sketch plugin to export sketch file to Adobe After Effect</description>
     <language>en</language>
       <item>
-        <title>Version 2.02</title>
+        <title>Version 2.03</title>
         <description>
           <![CDATA[
             <ul>
-            <li>Shape Export!</li>
+            <li>support Sketch v49</li>
             </ul>
           ]]>
         </description>
-        <enclosure url="https://github.com/bigxixi/Sketch2AE/archive/master.zip" sparkle:version="2.02" />
+        <enclosure url="https://github.com/bigxixi/Sketch2AE/archive/master.zip" sparkle:version="2.03" />
       </item>
   </channel>
 </rss>

@@ -78,7 +78,7 @@ var shapeExport = function(context) {
         return cInfo;
     }
 
-    //读取渐变
+    //读取渐变(shouldSmoothenOpacity()方法有问题)
     // get gradient info
     function getGradientInfo(gradient){
         var gInfo = {
@@ -87,7 +87,7 @@ var shapeExport = function(context) {
                 "elipseLength":gradient.elipseLength(),
                 "from":[gradient.from().x,gradient.from().y],
                 "to":[gradient.to().x,gradient.to().y],
-                "shouldSmoothenOpacity":gradient.shouldSmoothenOpacity(),
+                //"shouldSmoothenOpacity":gradient.shouldSmoothenOpacity(),
                 "gradientPointStops":[],
                 "gradientColors":[]
         }
@@ -376,7 +376,7 @@ var shapeExport = function(context) {
     function createUI() {
         var pickArtboardDsp = local_pickArtboardDsp + doc.currentPage().name()+ "):";
         var UI = COSAlertWindow.new();
-            UI.setMessageText('Sk2AE Shape Exporter v1.0');
+            UI.setMessageText('Sk2AE Shape Exporter v1.1');
             UI.addTextLabelWithValue( local_exportDsp2 );
             UI.addTextLabelWithValue( local_inputLength );
             UI.addTextFieldWithValue( '15' );
@@ -631,7 +631,15 @@ var shapeExport = function(context) {
                                         'var shapeGroup'+n+' = newShape'+n+'.property("ADBE Root Vectors Group").addProperty("ADBE Vector Group");\n';
                                 var subShape = sLayers[n].children();
                                 //for(var k=subShape.length-2;k》=0;k--){
-                                for(var k=0;k<subShape.length-1;k++){
+                                if(subShape[0].class() == "MSShapeGroup"){
+                                    var kMin = 0;
+                                    var kBegin = subShape.length-1;
+                                }else{
+                                    var kMin = -1;
+                                    var kBegin = subShape.length-2;
+                                }
+
+                                for(var k=kBegin;k>kMin;k--){
                                     thePath = getPathInfo(subShape[k]);
                                     var pPos=inTang=outTang="";
                                     var pointCount;
@@ -684,10 +692,12 @@ var shapeExport = function(context) {
                                                         '    shapePath'+n+'_'+k+'.setValue(SKShape'+n+'_'+k+');\n' +
                                                         '\n';
                                         }
-                                            script += 'shapePathGroup'+n+'_'+k+'.name = "'+subShape[k].name()+'";\n';
-                                        if(subShape[k].booleanOperation() != -1){
-                                            script += 'var shapeMerge'+n+k+' = shapeGroup'+n+'.property("ADBE Vectors Group").addProperty("ADBE Vector Filter - Merge");\n' +
-                                                    '    shapeMerge'+n+k+'.property("ADBE Vector Merge Type").setValue('+(subShape[k].booleanOperation()+2)+');\n'; 
+                                        script += 'shapePathGroup'+n+'_'+k+'.name = "'+subShape[k].name()+'";\n';
+                                        if((k+1<subShape.length) && (subShape[k+1].class() != "MSShapeGroup")){
+                                            if(subShape[k+1].booleanOperation() != -1){
+                                                script += 'var shapeMerge'+n+k+' = shapeGroup'+n+'.property("ADBE Vectors Group").addProperty("ADBE Vector Filter - Merge");\n' +
+                                                        '    shapeMerge'+n+k+'.property("ADBE Vector Merge Type").setValue('+(subShape[k+1].booleanOperation()+2)+');\n'; 
+                                            }
                                         }
                                     }
                                 var parentPath = getPathInfo(sLayers[n]);
