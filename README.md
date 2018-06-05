@@ -1,3 +1,5 @@
+2.04 update - support Sketch v50  
+--------
 2.03 update - support Sketch v49  
 --------
 Google release another 'Sketch2AE' plugin, if you are looking for that one, visit . 

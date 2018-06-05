@@ -4,6 +4,7 @@
 
 var shapeExport = function(context) {
     var doc = context.document;
+    var SKver = MSApplicationMetadata.metadata().appVersion;
     //var version = context.plugin.version();
     var artboards = doc.currentPage().artboards();
     if(!doc.fileName()){
@@ -222,7 +223,7 @@ var shapeExport = function(context) {
                 "opacity":curLayer.style().contextSettings().opacity()*100,
                 "strokes":getBorderInfo(curLayer.style()),
                 "fills":getFillInfo(curLayer.style()),
-                "fillRule":curLayer.bezierPath().windingRule(),
+                //"fillRule":curLayer.bezierPath().windingRule(),
                 "shadows":getShadowInfo(curLayer.style()),
                 "innerShadows":getInnerShadowInfo(curLayer.style()),
                 "blurEnable":curLayer.style().blur().isEnabled(),
@@ -236,6 +237,12 @@ var shapeExport = function(context) {
                 "blurAngle":curLayer.style().blur().motionAngle(),
                 "blurOrigin":[curLayer.style().blur().center().x,curLayer.style().blur().center().y]
             };
+            if(Number(SKver)>=50){
+                var tempPath = curLayer.pathInFrame();
+                Path.fillRule = NSBezierPath.bezierPathWithPath(tempPath).windingRule();
+            }else{
+                Path.fillRule = curLayer.bezierPath().windingRule();
+            }
         }else if(curLayer.children().length == 1){//shape in the shape group
             var Path = {
                 "isClosed":false,
@@ -262,7 +269,7 @@ var shapeExport = function(context) {
                 "opacity":curLayer.style().contextSettings().opacity()*100,
                 "strokes":getBorderInfo(curLayer.style()),
                 "fills":getFillInfo(curLayer.style()),
-                "fillRule":curLayer.bezierPath().windingRule(),
+                //"fillRule":curLayer.bezierPath().windingRule(),
                 "shadows":getShadowInfo(curLayer.style()),
                 "innerShadows":getInnerShadowInfo(curLayer.style()),
                 "blurEnable":curLayer.style().blur().isEnabled(),
@@ -276,12 +283,23 @@ var shapeExport = function(context) {
                 "blurAngle":curLayer.style().blur().motionAngle(),
                 "blurOrigin":[curLayer.style().blur().center().x,curLayer.style().blur().center().y]
             }; 
+            if(Number(SKver)>=50){
+                var tempPath = curLayer.pathInFrame();
+                Path.fillRule = NSBezierPath.bezierPathWithPath(tempPath).windingRule();
+            }else{
+                Path.fillRule = curLayer.bezierPath().windingRule();
+            }
             return Path;
         }else{
             log("shape layer type error");
         }
+        if(Number(SKver)>=50){
+            var tempPath = curLayer.pathInFrame();
+            var tempStringGroup = NSBezierPath.bezierPathWithPath(tempPath).toString().split("\n");
+        }else{
+            var tempStringGroup = curLayer.bezierPath().toString().split("\n");
+        }
 
-        var tempStringGroup = curLayer.bezierPath().toString().split("\n");
         var checkClose = tempStringGroup[tempStringGroup.length-2].split(" ");
         if(checkClose[checkClose.length-1] == "closepath"){
             Path.isClosed = true;
@@ -391,7 +409,9 @@ var shapeExport = function(context) {
                     checkbox.setTitle(artboards[i].name());
                         checkbox.setState(false);
             for(var j=0;j<subLayer.length;j++){
-                    checkbox.setState(subLayer[j].isSelected());   
+                    if(subLayer[j].isSelected() == 1){
+                        checkbox.setState(true);   
+                    }
                 }
                 UI.addAccessoryView( checkbox );
             }

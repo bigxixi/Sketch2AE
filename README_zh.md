@@ -1,3 +1,7 @@
+2.04 update - 支持 Sketch v50  
+--------
+2.03 update - 支持 Sketch v49  
+--------
 Google 也搞了个叫Sketch2AE的插件，和我这个版本的区别见：https://zhuanlan.zhihu.com/p/28828769  <br>
 ----------------------
 <img src="https://raw.githubusercontent.com/bigxixi/ReadMe-Resources/master/Sketch2AE/sk2aegif.gif">  
