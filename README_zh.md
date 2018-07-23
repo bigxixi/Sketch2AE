@@ -92,9 +92,9 @@ Google 也搞了个叫Sketch2AE的插件，和我这个版本的区别见：http
 ## 求打赏:
 如果您觉得本插件好用，欢迎打赏，感谢您的支持！  
 
-[<img src="http://bigxixi.com/donate/index.hyperesources/wechat.png" width="30%" height="30%">](http://bigxixi.com/donate)
-[<img src="http://bigxixi.com/donate/index.hyperesources/alipay.jpg" width="30%" height="30%">](http://bigxixi.com/donate)  
+[<img src="https://raw.githubusercontent.com/bigxixi/bigxixi.github.io/master/donate/index.hyperesources/wechat.png" width="30%" height="30%">](http://bigxixi.com/donate/index.html)
+[<img src="https://raw.githubusercontent.com/bigxixi/bigxixi.github.io/master/donate/index.hyperesources/alipay%402x.jpg" width="30%" height="30%">](http://bigxixi.com/donate/index.html)  
 
 也欢迎使用PayPal：  
 
-[<img src="http://bigxixi.com/donate/index.hyperesources/paypal.png" width="30%" height="30%">](https://www.paypal.me/bigxixi/)  
+[<img src="https://raw.githubusercontent.com/bigxixi/bigxixi.github.io/master/donate/index.hyperesources/paypal.png" width="30%" height="30%">](https://www.paypal.me/bigxixi/index.html)  
