@@ -91,5 +91,5 @@ Special thanks to [Ashung's code](https://github.com/Ashung/Automate-Sketch).
 
 Thank you very much!  
 
-[<img src="http://bigxixi.com/donate/index.hyperesources/paypal.png" width="30%" height="30%">](https://www.paypal.me/bigxixi/)  
+[<img src="https://raw.githubusercontent.com/bigxixi/bigxixi.github.io/master/donate/index.hyperesources/paypal.png" width="30%" height="30%">](https://www.paypal.me/bigxixi/)  
 
